@@ -1,0 +1,945 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Welcome to Web Technology</title>
+<style>
+body {
+    background-color:#CACACA;
+}
+*{
+	margin:0;
+	padding:0;
+}
+
+.lefside
+{
+	position:fixed;
+
+}
+.leftside ul
+{
+	width:55px;
+	position:fixed;
+	margin-top:150px;
+}
+.leftside li{
+	list-style-type:none;
+	padding:15px;
+	transition: .6s;
+	color:white;
+}
+
+.leftside li a
+{
+    color:#ffffff;
+}
+
+.leftside li i{
+	font-size: 25px;
+}
+.leftside li:hover
+{
+	padding: 20px 40px;
+	margin-left:3px;
+}
+.leftside li:nth-child(1){
+	background: #3b5998;
+}
+.leftside li:nth-child(2){
+	background: #00aced;
+}
+.leftside li:nth-child(3){
+	background: #dd4b39;
+}
+.leftside li:nth-child(4){
+	background: #007bb6;
+}
+.leftside li:nth-child(5){
+	background: #cb2017;
+}
+
+.wrapper{
+	width:1000px;
+	height:1000px;
+	background-color:#cacaca;
+	margin:auto;
+	margin-top:20px;
+}
+#header1{
+	width:1000px;
+	height:115px;
+	background-color:#FA8A8A;
+	float:left;
+}
+
+.style1
+ {
+     width: 782px;
+     font-size: x-large;
+     font-family: "Clarendon BT";
+ }
+ .style2
+ {
+     font-family: "Bodoni Bk BT";
+     font-style: italic;
+     font-size: large;
+     padding: 1px;
+ }
+		 .style3
+         {
+             font-size: xx-large;
+             padding: 1px;
+         }
+	
+.marq{
+	width:1000px;
+	height:30px;
+	background-color:#FFECEC;
+	float:left;
+	color:black;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+ 	font-size:12px;
+	padding-top:15px;
+}	
+
+.menu{
+	width:1000px;
+	height:50px;
+	float:left;
+	background-color:#ffbd9d;
+	z-index:10;
+	position:relative;
+	
+}
+#nav
+{
+    width:100%;
+}
+
+#nav li a, #nav li 
+{
+    text-align:center;
+	float: left;
+ 	font-family:Verdana, Arial, Helvetica, sans-serif;
+ 	font-size:16px;
+ 	top:10px;
+}
+
+#nav li 
+{
+    width:16%;
+	list-style: none;
+	position: relative;
+}
+
+#nav li a {
+ padding: 0.5em 1.6em;
+ text-decoration: none;
+ color: white;
+ background:#ffbd9d;
+}
+
+#nav li a:hover {
+	background:#fa8a8a;
+}
+.hasChildren {
+	position: absolute;
+	width: 15px; height: 5px;
+	background: black;
+	right : 0;
+	bottom: 0;
+	
+}
+
+#nav li ul {
+ display: none;
+ position: absolute;
+ left: 0;
+ top: 100%;
+ padding: 0; margin: 0;
+ 
+ 
+}
+
+#nav li:hover > ul {
+ display:block;
+}
+
+
+
+
+#nav li ul li, #nav li ul li a {
+ float: none;
+ color:#E4E4E4;
+}
+
+#nav li ul li {
+ _display: inline; /* for IE6 */
+}
+
+#nav li ul li a {
+ width: 80px;
+ display: block;
+}
+
+.content_head1{
+	width:1000px;
+	height:6px;
+	background-color:#712400;
+	float:left;
+}
+
+
+
+.content{
+	width:1000px;
+	height:auto;
+	float:left;
+	padding-top:0px;
+	margin-bottom:3px;
+}
+
+.content_left{
+	width:325px;
+	height:430px;
+	float:left;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background-color:#FFFFFF;
+	box-shadow: 0px 5px 0px #888888;
+	padding-bottom:0px;
+	margin-top: 3px;
+	margin-bottom: 1px;
+}
+
+.content_p{
+	width:310px;
+	height:150px;
+	float:left;
+	margin-top:10%;
+	font-size:15px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	color:#793D00;
+	padding-left:10px;
+	line-height:20px;
+}
+
+.content_h{
+	
+	float:left;
+	margin:0px;
+	margin-left: 2px;
+	margin-right: 5px;
+	font-size:13px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	text-align: justify;
+	color: #361B1B;
+	padding-left:2px;
+	line-height:20px;
+}
+
+.content_m{
+	
+	float:left;
+	margin:0px;
+	margin-right: 5px;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color: black;
+	padding-left:150px;
+	line-height:20px;
+}
+.content_m a:link {
+    color:#FF9900;
+	text-decoration:none;
+}
+.content_m a:visited {
+	color:#330000;
+	text-decoration:none;	
+}
+.content_m a:hover {
+    color:#000000;	
+}
+
+#slide
+{
+	width:675px;
+	height:430px;
+	overflow:hidden;
+	left: 6px;
+	top: 0px;
+	margin: 3px 0;
+}
+
+#slide img
+{
+    width:auto;
+    height:430px;
+}
+
+.content1{
+	width:1000px;
+	height:365px;
+	float:left;
+	padding-top:0px;
+	margin-bottom:5px;
+	
+}
+
+.content1_news1{
+	width:320px;
+	height:35px;
+	float:left;
+	background-image:url(../doc/head.jpg);
+	background-color:#003385;
+	background-size: 350px 35px;
+	background-repeat:no-repeat;
+	margin:1px;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color: white;
+	padding-left:30px;
+	line-height:34px;
+	font-weight:bold;
+}
+
+
+.content1_news{
+	width:353px;
+	height:360px;
+	float:left;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background-color:#FFFFFF;
+	margin: 0px auto;
+	padding-bottom:0px;
+	margin-left:0px;
+}
+
+.content1_news ul{
+	margin-left:5px;
+	margin-top:33px;
+	list-style:none;
+}
+ .content1_news ul li{
+ 	display:block;
+	width:340px;
+	margin:2px;
+	font-size:11px;
+	background-repeat:no-repeat;
+	background-position:left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding-left:5px;
+	line-height:30px;
+}
+
+.content1_news a:link {
+    color:#000000;
+	text-decoration:none;
+}
+
+.content1_news a:visited {
+	color:#000000;
+	text-decoration:none;
+	
+}
+
+.content1_news a:hover {
+    color: #000099;
+	background-color:#FFBD9D;
+	font-weight:bold;
+}
+
+.content1_es1{
+	width:305px;
+	height:35px;
+	float:left;
+	background-image:url(../doc/head.jpg);
+	background-color:#003385;
+	background-size: 336px 35px;
+	background-repeat:no-repeat;
+	margin:1px;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color: white;
+	padding-left:30px;
+	line-height:34px;
+	font-weight:bold;
+}
+
+
+.content1_es{
+	width:340px;
+	height:360px;
+	float:left;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background-color:#FFFFFF;
+	margin: 0px auto;
+	padding-bottom:0px;
+	margin-left:6px;
+}
+
+.content1_es ul{
+	margin-left:5px;
+	margin-top:33px;
+	list-style:none;
+}
+ .content1_es ul li{
+ 	display:block;
+	width:330px;
+	margin:2px;
+	font-size:11px;
+	background-position:left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding-left:0px;
+	line-height:30px;
+}
+
+.content1_es a:link {
+    color:#000000;
+	text-decoration:none;
+}
+
+.content1_es a:visited {
+	color:#000000;
+	text-decoration:none;
+	
+}
+
+.content1_es a:hover {
+    color: #000099;
+	background-color:#FFBD9D;
+	font-weight:bold;
+}
+  
+.content1_oth{
+	width:295px;
+	height:362px;
+	float:left;
+}
+
+.content1_oth1{
+	width:260px;
+	height:35px;
+	float:left;
+	background-image:url(../doc/head.jpg);
+	background-color:#003385;
+	background-size: 291px 35px;
+	background-repeat:no-repeat;
+	margin:2px;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:white;
+	padding-left:30px;
+	line-height:34px;
+	font-weight:bold;
+}
+
+
+.content1_oth{
+	width:295px;
+	height:360px;
+	float:left;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background-color:#F3F3F3;
+	font-weight:bold;
+	margin: 0px auto;
+	padding-bottom:0px;
+	margin-left:6px;
+	
+}
+
+.content1_oth ul{
+	margin-left:5px;
+	margin-top:38px;
+	list-style:none;
+	
+	
+}
+.content1_oth ul li{
+ 	display:block;
+	width:295px;
+	margin:2px;
+	font-size:11px;
+	background-image:url(../doc/i1.jpg);
+	background-repeat:no-repeat;
+	background-position:left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding-left:18px;
+	line-height:25px;
+}
+
+.content1_oth a:link {
+  	color:#001E3C;
+	text-decoration:none;
+
+}
+
+.content1_oth a:visited {
+    color:#002346;
+	text-decoration:none;
+	
+	
+}
+
+.content1_oth a:hover {
+    color:#FF6600;
+	
+}
+
+.content1_oth2{
+	width:100px;
+	height:10px;
+	float:left;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background-color:#F3F3F3;
+	font-weight:bold;
+	margin: 0px auto;
+	padding-bottom:0px;
+	margin-left:100px;
+}
+
+.content1_oth2 a:link {
+    color:#FF9900;
+	text-decoration:none;
+}
+
+.content1_oth2 a:visited {
+	color:#330000;
+	text-decoration:none;
+	
+	
+}
+
+.content1_oth2 a:hover {
+    color:#0080FF;
+	
+}
+
+#footer_head{
+	width:1000px;
+	height:2px;
+	background-color:#000000;
+	float:left;
+}
+
+#footer{
+	width:1000px;
+	height:265px;
+	background:#ffbd9d;
+	float:left;
+	padding-bottom:20px;
+}
+
+.footer_z1{
+	width:230px;
+	height:100px;
+	float:left;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin: 5px auto;
+	padding-bottom:10px;
+	margin-left:17px;
+	margin-top:12px;
+	color:#000000;
+	font-weight:bold;
+}
+
+.footer_z1 ul{
+	margin-left:0px;
+	margin-top:10px;
+	list-style:none;
+}
+.footer_z1 ul li{
+ 	display:block;
+	width:230x;
+	margin:0px;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding-left:0px;
+	line-height:25px;
+	color:#00354F;
+}
+
+.footer_z2{
+	width:230px;
+	height:100px;
+	float:left;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin: 5px auto;
+	padding-bottom:10px;
+	margin-left:17px;
+	margin-top:12px;
+	color:#000000;
+	font-weight:bold;
+}
+
+.footer_z2 ul{
+	margin-left:0px;
+	margin-top:10px;
+	list-style:none;
+}
+.footer_z2 ul li{
+ 	display:block;
+	width:230x;
+	margin:0px;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding-left:0px;
+	line-height:25px;
+	color:#00354F;
+}
+
+/* unvisited link */
+.footer_z1 a:link {
+  	color:#660000;
+	text-decoration:none;
+}
+
+/* visited link */
+.footer_z1 a:visited {
+ 	color:#660000;
+	text-decoration:none;
+}
+
+.footer_z1 a:hover {
+	color:#FFFFFF;
+}
+
+.footer_z1 a:active {
+    color: yellow;
+}
+
+.socialmedia{
+	float:left;
+	height:20px;
+	width:300px;
+	margin-left:0px;
+	display:inline;
+	margin-top:5px;
+}
+.socialmedia ul{
+	display:inline;
+}
+.socialmedia li{
+	list-style-type:none;
+	float:left;
+	transition: .6s;
+	color:#fa8a8a;
+	display:inline;
+}
+
+.socialmedia li i{
+	font-size: 20px;
+	height:30px;
+	width:35px;
+	border-radius:25px;
+	margin:3px;
+	margin-top:1px;
+	padding:7px 0px 0px 0px;
+	text-align:center;
+	
+}
+
+.socialmedia li .fa-facebook{
+	background-color: #3b5998;
+}
+.socialmedia li .fa-twitter{
+	background-color: #00aced;
+}
+.socialmedia li .fa-google-plus{
+	background-color: #dd4b39;
+}
+.socialmedia li .fa-linkedin{
+	background-color: #007bb6;
+}
+.socialmedia li .fa-pinterest{
+	background-color: #cb2017;
+}
+.socialmedia li i:hover{
+	transform:rotateY(360deg);
+	box-shadow:0px 3px 3px 3px #660033;
+}
+/*.socialmedia li:hover{
+	padding:10px 4px ;
+}*/
+
+.socialmedia li a
+{
+    color:#ffffff;
+}
+
+.socialmedia li a .fa
+{
+    transition:.5s;
+}
+    
+
+#footer1_head{
+	width:1000px;
+	height:5px;
+	background-color:#1E0F0F;
+	float:left;
+}
+#footer1{
+	width:1000px;
+	height:50px;
+	background-color:#FA8A8A;
+	list-style:none;
+	float:left;
+	padding-bottom: 30px;
+}
+
+
+#footer1 ul{
+	margin-left:0px;
+	margin-top:10px;
+	list-style:none;
+}
+#footer1 ul li{
+ 	display:block;
+	width:230x;
+	margin:0px;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding-left:0px;
+	line-height:20px;
+	color:#ffffff;
+	text-align: center;
+}
+
+#footer1_head1{
+	width:1000px;
+	height:5px;
+	background-color:#CACACA;
+	float:left;
+}
+
+
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+
+          <div class="leftside">
+				<ul>
+					<li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://twitter.com/" target="_blank" ><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+					<li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+				</ul>
+		    </div>
+
+<div class="wrapper">
+    <table id="header1">
+    <tr><td>
+   <a href="index.html"><img  style="float: left; height: 89px; margin-top: 12px;"src="images/lg.png"alt="logo" width="230px"/></a>
+    </td>
+    <td class="style1"> <span class="style3">Welcome to Test Platform for Web Tutorial</span><br />
+        <span class="style2">An Easy Way to TEST</span>
+    </td></tr>
+    </table>	
+	<hr />
+	<div class="menu">
+				
+	<ul id="nav">
+		<li><a href="index.html">HOME </a></li>
+		<li><a href="index.html" target="_blank">ABOUT US </a></li>
+		<li><a href="wt.pdf" target="_blank">SYLLABUS </a></li>
+		<li><a href="#">SUBJECTS </a>
+		<ul>
+			<li><a href="tutes/Html_Tutorials/html_introduction.htm" target="_blank">HTML</a></li>
+			<li><a href="tutes/CSS_Tutorials/css_introduction.htm" target="_blank">CSS</a></li>
+			<li><a href="tutes/JavaScript_Tutorials/js_introduction.htm" target="_blank">JavaScript</a></li>
+			<li><a href="tutes/JQuery_Tutorials/jq_introduction.htm" target="_blank">Jquery</a></li>
+			<li><a href="tutes/PHP_Tutorials/php_introduction.htm" target="_blank">PHP</a></li>
+			<li><a href="tutes/Bootstrap_Tutorials/bootstrap_introduction.htm" target="_blank">BootStrap</a></li>
+		</ul>
+		</li>
+		<li><a href="Quiz/index.php" target="_blank">QUIZ </a></li>
+		<li><a href="Contact/contact-form.php" target="_blank">CONTACT US </a></li>
+	</ul>
+
+	</div>
+
+
+    <div class="marq"><marquee scrollamount="5">
+    !! TEST TEST ENVIRONMENT <strong> TEST TEST ENVIRONMENT</strong>  TEST TEST ENVIRONMENT
+    </marquee></div>
+
+		<div class="content">
+			
+			<div class="content_left">
+			
+				<div class="content_p"><h4>Introduction to Web Technology</h4><hr>
+				
+				<div class="content_h">
+				<p>The word <b>"Web"</b> shortened form of <b>World Wide Web</b> is a system of interlinked hypertext documents accessed via the Internet.<br />
+				The concept of web was created in 1989 by Sir Tim Berners-Lee, and was perfected at CERN in 1991 by a group of researchers which included Tim Berners Lee,(<i>the creator of hyperlink who is today considered the father of the web</i>). 
+                Web consists of billions of clients and server connected through wires and wireless networks.<br /><br />
+				A website is a collection of static files(webpages) such as HTML pages, images, graphics etc. A Web application is a web site with dynamic functionality</p></div>
+				
+				<div class="content_m">
+				<h4><a href="#" target="_blank">........more</a></h4>
+				</div>
+				</div>
+			</div>
+
+		<div id="slide">
+			<img class="mySlides" src="images/wt1.jpg" style="width:100%">
+			<img class="mySlides" src="images/wt2.jpg" style="width:100%">
+			<img class="mySlides" src="images/wt3.jpg" style="width:100%">
+			<img class="mySlides" src="images/wt4.jpg" style="width:100%">
+			<img class="mySlides" src="images/wt5.png" style="width:100%">
+			<img class="mySlides" src="images/wt6.jpg" style="width:100%">
+            <img class="mySlides" src="images/wt7.jpg" style="width:100%">
+		</div>
+		
+		<script>
+		var slideIndex = 0;
+		carousel();
+
+		function carousel() {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none"; 
+		}
+		slideIndex++;
+		if (slideIndex > x.length) {slideIndex = 1} 
+		x[slideIndex-1].style.display = "block"; 
+		setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+		</script>
+	</div>	
+    
+    <div class="content1">
+			 <div class="content1_news">
+			 	<div class="content1_news1">News</div>
+				<ul>
+				 	<marquee behavior="scroll" direction="up" scrollamount="2" onmouseover="stop()" onmouseout="start()">
+                    <li><a href="tutes/Html_Tutorials/html_frame.htm" target="_blank"><strong>HTML:Frames </strong></a><hr></li>
+                    <li><a href="tutes/CSS_Tutorials/css_margine.htm" target="_blank"><strong>CSS:How to set margin</strong></a><hr></li>
+                    <li><a href="tutes/PHP_Tutorials/php_cookies.htm" target="_blank"><strong>PHP:Cookies </strong></a><hr></li>
+                    <li><a href="tutes/JavaScript_Tutorials/js_dom.htm" target="_blank"><strong>JAVASCRIPT:DOM</strong></a><hr></li>
+                    <li><a href="tutes/JQuery_Tutorials/jq_attributes.htm" target="_blank"><strong>JQUERY:Attributes</strong></a><hr></li>	
+                        <li><a href="tutes/Bootstrap_Tutorials/bootstrap_glyphicons.htm" target="_blank"><strong>BOOTSTRAP:Glyphicons</strong></a><hr></li>
+					</marquee>
+			  	</ul>
+		  	 </div>
+			 	 
+			 <div class="content1_es">
+			 	<div class="content1_es1">UPCOMING EVENTS</div>
+					<ul>
+				 		<marquee behavior="scroll" direction="up" scrollamount="2" onmouseover="stop()" onmouseout="start()">
+                        <li><a href="Quiz/index.php" target="_blank"><strong>HTML Quiz </strong></a><hr></li>
+						<li><a href="Quiz/index.php" target="_blank"><strong>CSS Quiz </strong></a><hr></li>
+						<li><a href="Quiz/index.php" target="_blank"><strong>PHP Quiz </strong></a><hr></li>
+						<li><a href="Quiz/index.php" target="_blank"><strong>JAVASCRIPT QUIZ</strong></a><hr></li>
+						<li><a href="Quiz/index.php" target="_blank"><strong>JQUERY Quiz</strong></a><hr></li>
+                            <li><a href="Quiz/index.php" target="_blank"><strong>BOOTSTRAP Quiz</strong></a><hr></li>
+						</marquee>
+			  		</ul>
+		  				 	
+			 </div>
+			 <div> </div>
+			 	 
+			 <div class="content1_oth">
+			 	<div class="content1_oth1">IMPORTANT TOPICS</div>
+					<ul>
+					
+						<li> <a href="tutes/Html_Tutorials/html_introduction.htm" target="_blank">HTML : LINKS</a></li>
+						<li> <a href="tutes/Html_Tutorials/html_form.htm" target="_blank">HTML : FORMS</a></li>
+						<li> <a href="tutes/CSS_Tutorials/css_introduction.htm" target="_blank">CSS Attributes in HTML</a></li>
+						
+						<li> <a href="tutes/PHP_Tutorials/php_array.htm" target="_blank">PHP</a></li>
+						<li> <a href="tutes/PHP_Tutorials/php_cookies.htm" target="_blank">Cookies</a></li>
+                        		<li> <a href="https://www.youtube.com/user/MohammediComputers/playlists?shelf_id=7&view=50&sort=dd" target="_blank">Database Connectivity Videos in PHP</a></li>
+			  		</ul>
+		  		<div class="content1_oth2"><a href="#" target="_blank">............more</a></div>	 	
+			 </div>		 
+			 
+  </div>
+
+    <div id="footer_head"> </div>
+			
+	<div id="footer">
+		<div class="footer_z1">Shop Online Books:
+		  <a href="https://www.amazon.in/Web-Technology-Design-C-Xavier/dp/8122414508" target="_blank">
+        <img alt="" src="images/wtd.jpg" style="width: 200px; height: 250px; margin-top: 5px;" /></a>
+        
+ 	  </div>		 
+			
+
+		<div class="footer_z1">
+		  <a href="https://www.amazon.in/Internet-Web-Design-Ramesh-Bangia/dp/8170085454" target="_blank">
+        <img alt="" src="images/IWD.jpg" style="width: 200px;  height:250px; margin-left:5px; margin-top:16px; " /></a>
+ 	  </div>	
+
+<div class="footer_z1">FACILITIES
+		  <ul>
+              <li> <a href="Syllabus/Syllabus.pdf" target="_blank">SYLLABUS</a></li>
+              <li> <a href="https://www.youtube.com/channel/UCP-ijZJqrGr0drSrps-Loow/playlists" target="_blank">Web Developement Series</a></li>
+              <li> <a href="https://www.youtube.com/user/kudvenkat/playlists" target="_blank">Bootstrap Learning Series</a></li>
+               <li> <a href="https://www.youtube.com/user/hindidevtuts/playlists" target="_blank">Wordpress Learning Series</a></li>
+				
+				 		<li> <a href="#" target="_blank"></a></li>
+						<li> <a href="#" target="_blank"></a></li>
+						<li> <a href="#" target="_blank"></a></li>
+						<li> <a href="#" target="_blank">............more</a></li>
+		  </ul>
+		  
+ 	  </div>	
+	  
+	  
+	  <div class="footer_z2"><a href="http://localhost/Project/index.html" target="_blank">ABOUT US</a>
+		  <ul>
+              <li><a href="projectreport.docx" target="_blank">Project Report</a></li>
+						<li>KNIT MCA</li>
+				  		<li>BATCH 2016-19</li>
+                        <li><hr /></li>
+						<li>MCA 2<sup>nd</sup>Year</li>
+                        <li>KNIT SULTANPUR</li>
+						<li><hr />OTHER LINKS ARE:</li>
+						<div class="socialmedia">
+				        <ul>
+					        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					        <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+					        <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+					        <li><a href="https://in.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+				        </ul>
+			 </div>
+
+		  </ul>
+ 	  </div>	
+
+	</div>
+
+	<div id="footer1_head"></div>
+		
+	<div id="footer1">
+		<ul>
+						<li>KNIT MCA 2016-2019</li>
+						<li>Kamla Nehru Institute of Technology, Sultanpur - Web Design:Tutorials</li>
+						<li><strong>Date Created :</strong> 17 February 2018</li>
+		</ul>
+	</div>
+	<div id="footer1_head1"></div>
+
+
+</div>
+
+	</body>
+</html>
